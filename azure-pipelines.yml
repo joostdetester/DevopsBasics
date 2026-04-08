@@ -21,6 +21,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: |
+    echo "Build.SourcesDirectory=$(Build.SourcesDirectory)"
+    echo "System.DefaultWorkingDirectory=$(System.DefaultWorkingDirectory)"
+    find $(Build.SourcesDirectory) -name "*.war"
+    displayName: 'Find WAR files'
 - task: CopyFiles@2
   inputs:
     Contents: '**/.war'
