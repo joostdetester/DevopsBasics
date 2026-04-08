@@ -1,0 +1,24 @@
+# Maven / Java build outputs
+**/target/
+*.class
+
+# Logs
+*.log
+
+# Eclipse / m2e
+.project
+.classpath
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
